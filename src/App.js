@@ -29,8 +29,6 @@ function App() {
     };
 
     const deleteExpenseItem = (index) => {
-        //console.log(id);
-
         //filter
         // const newFilteredArray = expenses.filter((item) => item.id !== id);
         // setExpenses(newFilteredArray);
