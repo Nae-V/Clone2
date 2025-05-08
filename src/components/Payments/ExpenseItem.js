@@ -5,11 +5,14 @@ import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem = (props) => {
+    //console.log('받은익스첸스데이거', props);
     return (
-        <Card className="expense-item">
+        <Card className="expense-item" style={{ backgroundColor: props.color }}>
             <ExpenseDate date={props.date} />
-            <div className="expense-item__description">
+            <div className="expense-item__description" style={{ color: props.color }}>
                 <h2>{props.title}</h2>
+                <div className="expense-item__email">{props.email}</div>
+                <h2>{props.type}</h2>
                 <div className="expense-item__price">${props.amount}</div>
                 <button onClick={() => props.deleteExpenseItem(props.index)}>삭제하기</button>
             </div>

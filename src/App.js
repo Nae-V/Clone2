@@ -10,6 +10,9 @@ function App() {
             title: '수건',
             amount: 12.33,
             date: new Date(2025, 8, 14),
+            color: '#000000',
+            email: '',
+            type: '',
         },
     ]);
 
@@ -17,12 +20,17 @@ function App() {
         console.log('data', data);
         console.log('expenses', expenses);
 
+        console.log('제출 데이터:', data);
+
         setExpenses([
             {
                 id: Math.random().toString(),
                 title: data.name,
                 amount: data.price,
                 date: new Date(data.today),
+                color: data.color,
+                email: data.email,
+                type: data.type,
             },
             ...expenses,
         ]);
